@@ -5,18 +5,17 @@ import { map, Observable } from 'rxjs';
 import { environment } from '../../enviroments/enviroment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductService {
-
   private apiUrl = environment.apiUrl;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getProducts(): Observable<Product[]> {
-    return this.http.get<{ data: Product[] }>(`${this.apiUrl}/bp/products`)
-      .pipe(map(response => response.data)
-      );
+    return this.http
+      .get<{ data: Product[] }>(`${this.apiUrl}/bp/products`)
+      .pipe(map((response) => response.data));
   }
 
   getProductById(id: string) {
@@ -30,7 +29,7 @@ export class ProductService {
   updateProduct(id: string, product: Product) {
     return this.http.put<Product>(`${this.apiUrl}/bp/products/${id}`, product);
   }
-  
+
   deleteProduct(id: string) {
     return this.http.delete(`${this.apiUrl}/bp/products/${id}`);
   }

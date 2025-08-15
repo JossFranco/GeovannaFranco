@@ -1,27 +1,64 @@
-# GeovannaFranco
+# Product Management Application - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.20.
 
-## Development server
+Aplicación Angular para gestión de productos financieros que implementa todas las funcionalidades requeridas para un rol Senior, incluyendo listado, búsqueda, paginación, creación, edición y eliminación de productos con validaciones avanzadas.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Características principales
+- ✅ Listado de productos con paginación  
+- ✅ Búsqueda en tiempo real  
+- ✅ Formularios reactivos con validaciones complejas  
+- ✅ Modales de confirmación  
+- ✅ Diseño responsive  
+- ✅ Manejo de errores visuales  
+- ✅ Pruebas unitarias con >70% de cobertura  
+- ✅ Implementación de Clean Code y principios SOLID  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## Tecnologías utilizadas
+- Angular 18  
+- TypeScript 5 
+- Jest (Pruebas unitarias)  
+- Reactive Forms  
+- RxJS  
+- HTML5 & CSS3  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## Estructura del proyecto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+GeovannaFranco/
+├── backend/ # Servidor Node.js
+├── frontend/ # Aplicación Angular
+│ ├── src/
+│ │ ├── app/
+│ │ │ ├── components # Componentes reutilizables
+│ │ │ ├── interfaces # Definiciones de tipos
+│ │ │ ├── pages # Vistas principales
+│ │ │ ├── services # Lógica de negocio y API
+│ │ │ └── utils # Utilidades y validadores
+│ │ └── assets # Recursos estáticos
+│ └── angular.json # Configuración Angular
+├── README.md
+└── repo-interview-main.zip # Backend original
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## ⚙️ Instalación y ejecución
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Requisitos previos
+- Node.js v18.x o superior
+- npm v9.x o superior
+- Angular CLI v15.x
+
+### Configuración del backend
+```bash
+unzip repo-interview-main.zip -d backend
+cd backend
+npm install
+npm run start:dev
+
+Backend disponible en: http://localhost:3002

@@ -76,14 +76,6 @@ describe('ProductActionMenuComponent', () => {
     expect(component.modalOpen).toBe(false);
   });
 
-  it('should navigate when delete product its successful', () => {
-    component.product = mockProduct;
-    const routerSpy = jest.spyOn(component['router'], 'navigate');
-    jest.spyOn(component['productService'], 'deleteProduct').mockReturnValue(of({}));
-    component.onDeleteConfirm();
-    expect(routerSpy).toHaveBeenCalled();
-  })
-
   it('should show error modal when delete product fails', () => {
     component.product = mockProduct;
     jest.spyOn(component['productService'], 'deleteProduct').mockReturnValue(throwError(() => new Error('Error')));

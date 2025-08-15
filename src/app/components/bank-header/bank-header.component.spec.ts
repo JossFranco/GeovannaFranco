@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BankHeaderComponentComponent } from './bank-header.component';
+import { BankHeaderComponent } from './bank-header.component';
 
 describe('BankHeaderComponentComponent', () => {
-  let component: BankHeaderComponentComponent;
-  let fixture: ComponentFixture<BankHeaderComponentComponent>;
+  let component: BankHeaderComponent;
+  let fixture: ComponentFixture<BankHeaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BankHeaderComponentComponent]
+      imports: [BankHeaderComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BankHeaderComponentComponent);
+    fixture = TestBed.createComponent(BankHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,16 +1,15 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 @Component({
   selector: 'app-search-input',
   standalone: true,
-  imports: [],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './search-input.component.html',
-  styleUrl: './search-input.component.scss'
+  styleUrl: './search-input.component.scss',
 })
 export class SearchInputComponent {
-    @Output() searchTerm = new EventEmitter<string>();
+  @Output() searchTerm = new EventEmitter<string>();
 
   searchInput: string = '';
 
@@ -18,5 +17,3 @@ export class SearchInputComponent {
     this.searchTerm.emit(this.searchInput);
   }
 }
-
-
